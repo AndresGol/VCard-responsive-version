@@ -1,0 +1,114 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+  .responsive {
+    
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+
+
+
+  
+  body {
+    margin: 40px;
+    background-color: #fff;
+    color: #444;
+  }
+  
+  h1 {
+    font-family: 'Montserrat', sans-serif,;
+    margin: 0 0 0em 0;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif,;
+    margin: 0 0 0em 0;
+    font-weight: 500;
+    font-size: 1.2em;
+  }
+  
+  
+  p {
+    font-family: 'Raleway', sans-serif;
+  }
+  a{
+      color: #66c2d0;
+       text-decoration: none;
+    }
+  a:hover{
+      color: coral;
+        text-decoration: none;
+    }
+
+    .fa {
+        margin-top: 18px;
+        display: inline-block;
+        font: normal normal normal 16px/1 FontAwesome;
+        /* font-size: inherit; */
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        margin-left: 2px;
+        text-align: center;
+    }
+    .sidebar p {
+        margin: 3px;
+    font-size: 0.6em;
+    margin-top: 7px;
+    text-align: center;
+
+
+    }
+  .wrapper {
+    max-width: 940px;
+    margin: 0 20px;
+    display: grid;
+    grid-gap: 10px;
+  }
+  
+  @media screen and (min-width: 500px) {
+  
+    /* no grid support? */
+    .sidebar {
+      float: left;
+      width: 19.1489%;
+    }
+  
+    .content {
+      float: right;
+      width: 79.7872%;
+    }
+  
+    .wrapper {
+      margin: 0 auto;
+      grid-template-columns: 1fr 3fr;
+    }
+    
+    .header, .footer {
+      grid-column: 1 / -1;
+      /* needed for the floated layout */
+      clear: both;
+    }
+  
+  }
+  
+  .wrapper > * {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    /* needed for the floated layout*/
+    margin-bottom: 10px;
+  }
+  
+  /* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+  @supports (display: grid) {
+    .wrapper > * {
+      width: auto;
+      margin: 0;
+    }
+  }
