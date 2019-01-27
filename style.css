@@ -8,8 +8,19 @@
     height: auto;
   }
 
-
-
+  hr {
+    background-image: linear-gradient( to bottom left,
+     rgba(255, 255, 255, 1) 0,
+      rgba(127, 211, 134, 1) 51%,
+       rgba(62, 181, 169, 1) 65%,
+       #66c2d0 80% );
+    border: 0;
+    height: 3px;
+    width: 100%;
+    margin-left: 0%;
+    border-radius: 100px;
+    /* margin-top: 100px; */
+}
   
   body {
     margin: 40px;
@@ -21,6 +32,7 @@
     font-family: 'Montserrat', sans-serif,;
     margin: 0 0 0em 0;
     font-weight: bold;
+    font-size: 1.5em;
   }
 
   h2 {
@@ -29,10 +41,16 @@
     font-weight: 500;
     font-size: 1.2em;
   }
-  
+  h3 {
+    font-family: 'Montserrat', sans-serif,;
+    margin: 0 0 0em 0;
+    font-weight: 500;
+    font-size: 0.7em;
+  }
   
   p {
     font-family: 'Raleway', sans-serif;
+    font-size: 0.8em;
   }
   a{
       color: #66c2d0;
@@ -91,6 +109,8 @@
       grid-column: 1 / -1;
       /* needed for the floated layout */
       clear: both;
+      background-image: url(images/texture_1.png) ;
+      background-blend-mode: overlay;
     }
   
   }
